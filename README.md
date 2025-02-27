@@ -135,6 +135,6 @@ I also observed the timeline that shows window event logs(WEL) and EDR telemetry
 
 ![Screenshot (20)](https://github.com/user-attachments/assets/57a508ca-8069-493c-a930-6a9290061431)
 
-##PART 3
+## PART 3
 
 
