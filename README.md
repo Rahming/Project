@@ -36,7 +36,7 @@ Link to the Project (https://blog.ecapuano.com/p/so-you-want-to-be-a-soc-analyst
 5. Kali Linux 
 
 ## Steps
-# PART 1. 
+# PART 1 
 The first step was to set up the virtual environment. For this project "VMware Workstation Pro" by Broadcom was the software used. 
 
 Ubuntu Server 22.04.1 ISO was the version used because this version comes pre Installed with necessary packages to do this project.
@@ -104,7 +104,7 @@ Next was back to the attack system. I had to download sliver Linux server binary
 
 ![Screenshot (11)](https://github.com/user-attachments/assets/d40b7860-deff-4c72-8783-067de2f4313d)
 
-## Part 2 
+# Part 2 
 generating C2 payload is next. I opened sliver server and entered the following command to generate payload:
 
 generate --http [Linux_VM_IP] --save /opt/sliver
@@ -135,6 +135,6 @@ I also observed the timeline that shows window event logs(WEL) and EDR telemetry
 
 ![Screenshot (20)](https://github.com/user-attachments/assets/57a508ca-8069-493c-a930-6a9290061431)
 
-## PART 3
+# PART 3
 
 
