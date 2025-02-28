@@ -33,7 +33,7 @@ Link to the Project (https://blog.ecapuano.com/p/so-you-want-to-be-a-soc-analyst
 
 4. YARA
 
-5. Kali Linux 
+5. Ubuntu Linux 
 
 ## Steps
 # PART 1 
@@ -180,6 +180,6 @@ Then I tested if the rule worked and it blocked the command by kicking me out th
 ![Screenshot (24)](https://github.com/user-attachments/assets/3cd1adb0-4b54-4fce-bb40-bb93b8689fb0)
 
 # PART 5
-
+This part is about tuning False Positives.
 
 
