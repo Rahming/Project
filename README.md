@@ -1,4 +1,4 @@
-# So You Want to be a SOC Analyst
+# SOC Analyst lab
 Link to the Project (https://blog.ecapuano.com/p/so-you-want-to-be-a-soc-analyst-intro)
 
 ## Objective
@@ -136,7 +136,7 @@ I also observed the timeline that shows window event logs(WEL) and EDR telemetry
 ![Screenshot (20)](https://github.com/user-attachments/assets/57a508ca-8069-493c-a930-6a9290061431)
 
 # PART 3
-This part was about crafting detections. This part uses lsass with the C2 implant I used in part 2. Lsass was not working for me so I could not see this part through but I followed along with the website screenshots. First you start with a procdump command in the linux VM then you dectect it with LimaCharlie. lsass.exe is a known sensitive process "SENSITIVE_PROCESS_ACCESS" event is what you would search for in the timeline.
+This part was about crafting detections. This part uses lsass with the C2 implant I used in part 2. Lsass was not working for me (I am using a differnet VM because the correct VM downloads are unavailable)so I could not see this part through but I followed along with the website screenshots. First you start with a procdump command in the linux VM then you dectect it with LimaCharlie. lsass.exe is a known sensitive process "SENSITIVE_PROCESS_ACCESS" event is what you would search for in the timeline.
 
 
 ![image](https://github.com/user-attachments/assets/f72581a8-aa8d-424e-9cb9-1838318235a3)
@@ -160,4 +160,26 @@ Once the rule is made, you can go back to the linux VM and run the procdump comm
 ![image](https://github.com/user-attachments/assets/1c9a3908-8fab-4b0e-953c-c21683a328e2)
 
 ![image](https://github.com/user-attachments/assets/1241def0-18b1-4627-beec-89db52d063ec)
+
+# PART 4
+Part 4 is about blocking attacks. First I did the following command for Lima Charlie to detect:
+
+vssadmin delete shadows /all
+
+![Screenshot (21)](https://github.com/user-attachments/assets/bd354601-018c-46fc-9eda-9fa2d1a5ca5f)
+
+![Screenshot (22)](https://github.com/user-attachments/assets/c2e071f6-d62f-4d41-af42-a06be25fbb49)
+
+I opened the event from the timeline and created a detection & Response(D&R) rule.
+
+![Screenshot (23)](https://github.com/user-attachments/assets/b1c492de-c1d5-41f5-8eb1-1d4cde8397be)
+
+
+Then I tested if the rule worked and it blocked the command by kicking me out the shell.
+
+![Screenshot (24)](https://github.com/user-attachments/assets/3cd1adb0-4b54-4fce-bb40-bb93b8689fb0)
+
+# PART 5
+
+
 
