@@ -136,5 +136,28 @@ I also observed the timeline that shows window event logs(WEL) and EDR telemetry
 ![Screenshot (20)](https://github.com/user-attachments/assets/57a508ca-8069-493c-a930-6a9290061431)
 
 # PART 3
+This part was about crafting detections. This part uses lsass with the C2 implant I used in part 2. Lsass was not working for me so I could not see this part through but I followed along with the website screenshots. First you start with a procdump command in the linux VM then you dectect it with LimaCharlie. lsass.exe is a known sensitive process "SENSITIVE_PROCESS_ACCESS" event is what you would search for in the timeline.
 
+
+![image](https://github.com/user-attachments/assets/f72581a8-aa8d-424e-9cb9-1838318235a3)
+
+
+Once you find the event, You can make a detection and response(D&R) rule that would alert anytime the activtiy(SENSITIVE_PROCESS_ACCESS) occurs
+
+
+![image](https://github.com/user-attachments/assets/7309d48f-f75e-4123-a806-dd137e0d16bd)
+
+
+![image](https://github.com/user-attachments/assets/30364e32-4a6b-419e-b40e-ba62df0fc38b)
+
+![image](https://github.com/user-attachments/assets/bb23318c-6985-4f72-97ad-f0f8c9733dff)
+
+![image](https://github.com/user-attachments/assets/f1b16971-7b17-4ae9-b385-3676095261bb)
+
+Once the rule is made, you can go back to the linux VM and run the procdump command to test if the rule you made will work and detect the command
+
+
+![image](https://github.com/user-attachments/assets/1c9a3908-8fab-4b0e-953c-c21683a328e2)
+
+![image](https://github.com/user-attachments/assets/1241def0-18b1-4627-beec-89db52d063ec)
 
